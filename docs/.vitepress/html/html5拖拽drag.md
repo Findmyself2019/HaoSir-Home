@@ -1,0 +1,57 @@
+## html5拖拽drag
+
+```
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta name="author" content="oscar999">
+  <title></title>
+</head>
+
+<body>
+  <div id="dropbox"> Drop Here </div>
+  <div id="filecontent"></div>
+  <img src="" alt="" id="img">
+  <img src="" alt="">
+  <script>
+    var dropbox = document.getElementById("dropbox");
+    dropbox.addEventListener("dragenter", dragenter, false);
+    dropbox.addEventListener("dragover", dragover, false);
+    dropbox.addEventListener("drop", drop, false);
+
+    function dragenter(e) {
+      e.stopPropagation();
+      e.preventDefault();
+    }
+
+    function dragover(e) {
+      e.stopPropagation();
+      e.preventDefault();
+    }
+
+    function drop(e) {
+      e.stopPropagation();
+      e.preventDefault();
+      var dt = e.dataTransfer;
+      var files = dt.files;
+      if (files.length) {
+        var file = files[0];
+        var reader = new FileReader();
+        reader.onload = function () {
+          document.getElementById("filecontent").innerHTML = this.result;
+          document.getElementsByTagName('img')[1].src = this.result
+        };
+        const url = URL.createObjectURL(file)
+          document.getElementById('img').src = url
+          reader.readAsDataURL(file)
+      }
+    }
+
+  </script>
+</body>
+
+</html>
+```
+

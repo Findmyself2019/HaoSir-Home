@@ -1,5 +1,5 @@
 import { defineConfig } from 'vitepress'
-
+import { getSideBarList } from './utils'
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
   base: '/HaoSir-Home/',
@@ -67,5 +67,13 @@ export default defineConfig({
         link: '/team/index'
       }
     ],
+    sidebar: {
+      // 'basic': getSideBarList('/basic'),
+      'html': getSideBarList('/html'),
+      // 'core': getSideBarList('/core'),
+      // 'teach': getSideBarList('/teach'),
+      // 'summarize': getSideBarList('/summarize'),
+      // 'team': getSideBarList('/team'),
+    },
   }
 })
