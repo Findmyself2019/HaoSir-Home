@@ -14,7 +14,16 @@ export default defineConfig({
     nav: [
       {
         text: '基础',
-        link: '/basic/index'
+        items: [
+          {
+            text: 'HTML',
+            link: '/html/index'
+          },
+          {
+            text: 'CSS',
+            link: '/css/index'
+          },
+        ]
       },
       {
         text: 'API',
