@@ -17,11 +17,11 @@ export default defineConfig({
         items: [
           {
             text: 'HTML',
-            link: '/docs/html/index'
+            link: '/html/index'
           },
           {
             text: 'CSS',
-            link: '/docs/css/index'
+            link: '/css/index'
           },
         ]
       },
