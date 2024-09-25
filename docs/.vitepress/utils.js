@@ -6,10 +6,10 @@ export const getSideBarList = (pathname) => {
   if (['/basic', '/core', '/html'].includes(pathname)) {
     return [
       {
-        text: '基础篇',
+        text: 'HTML5',
         collapsed: false,
         items: [
-          { text: '基础篇', link: '/html/html5拖拽drag' },
+          { text: '拖拽上传', link: '/html/html5拖拽drag' },
           { text: '基础篇1', link: '/basic/basic1' },
           { text: '基础篇2', link: '/basic/basic2' }
         ]
